@@ -7,7 +7,7 @@
  * Plugin Name:       Kntnt Parallax Images
  * Plugin URI:        https://github.com/Kntnt/kntnt-parallax-images
  * GitHub Plugin URI: https://github.com/Kntnt/kntnt-parallax-images
- * Description:       Add parallax effects to images target with a CSS or jQuery selector.
+ * Description:       Adds parallax effects to images target with a CSS or jQuery selector.
  * Version:           1.1.0
  * Author:            Thomas Barregren
  * Author URI:        https://www.kntnt.com/
