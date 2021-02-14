@@ -1,7 +1,10 @@
 <?php
 
-defined('WPINC') || die;
+defined( 'WPINC' ) || die;
 
-add_option('kntnt-parallax-images', [
-    'selector' => ".parallax img, img[class*='parallax']",
-]);
+add_option( 'kntnt-parallax-images', [
+	'post_types' => [
+		'post' => 'post',
+	],
+	'selector' => '.parallax img, img.parallax',
+] );
