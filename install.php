@@ -7,4 +7,5 @@ add_option( 'kntnt-parallax-images', [
 		'post' => 'post',
 	],
 	'selector' => '.parallax img, img.parallax',
+	'percent_of_height' => 50,
 ] );

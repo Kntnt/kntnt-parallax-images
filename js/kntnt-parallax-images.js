@@ -1,8 +1,5 @@
 jQuery(document).ready(function ($) {
 
-    // How many percentage of the original height will be shown.
-    const percent_of_height = 50;
-
     // For each image that use this plugin…
     $(kntnt_parallax_images.selector).each(function () {
 
@@ -15,16 +12,16 @@ jQuery(document).ready(function ($) {
         // Set background image to the same as the foreground image,
         // and keep the foreground image for semantic correctness.
         $img.css({
-            'background-image': 'url(' + img.src + ')',
-            'background-size': 'cover',
-            'background-position': 'center',
+            "background-image": "url(" + img.src + ")",
+            "background-size": "cover",
+            "background-position": "center",
         });
 
         // When the image is complete loaded, this plugin must be setup.
         // To avoid racing condition, we first add an eventlistener for
         // "on load" that will be called only once, and then check if that
         // event already has been fired.
-        $img.one('load', function () {
+        $img.one("load", function () {
             setup();
         });
         if (img.complete) setup();
@@ -44,12 +41,12 @@ jQuery(document).ready(function ($) {
 
             // Restore image to its natural height.
             $img.css({
-                'height': 'auto',
-                'width': 'auto',
+                "height": "auto",
+                "width": "auto",
             });
 
             // Calculate the new image height.
-            image_height = img.height * percent_of_height / 100;
+            image_height = img.height * kntnt_parallax_images.percent_of_height / 100;
 
             // Calculate the number of pixels an image travels from showing to
             // disappearing when scrolled through an entire screen.
@@ -58,15 +55,15 @@ jQuery(document).ready(function ($) {
             // Hide the foreground image, so only the background image is
             // visible.
             $img.css({
-                'height': '0px',
-                'width': img.width,
-                'padding': '0px',
-                'padding-top': image_height,
+                "height": "0px",
+                "width": img.width,
+                "padding": "0px",
+                "padding-top": image_height,
             });
 
             updateImagePosition();
 
-        };
+        }
 
         // Calculate and set the current background-position-y.
         function updateImagePosition() {
@@ -77,9 +74,9 @@ jQuery(document).ready(function ($) {
             scroll_factor = Math.min(Math.max(scroll_factor, 0), 100);
 
             // Move image.
-            $img.css('background-position', 'center ' + scroll_factor + '%');
+            $img.css("background-position", "center " + scroll_factor + "%");
 
-        };
+        }
 
     });
 

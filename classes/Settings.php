@@ -25,6 +25,13 @@ class Settings extends Abstract_Settings {
 			'default' => '.parallax img, img.parallax',
 		];
 
+		$fields['percent_of_height'] = [
+			'type' => 'integer',
+			'label' => __( 'Height', 'kntnt-parallax-images' ),
+			'description' => __( 'The height of the parallax viewing port as a percentage of the original image height that.', 'kntnt-parallax-images' ),
+			'default' => 50,
+		];
+
 		$fields['submit'] = [
 			'type' => 'submit',
 		];

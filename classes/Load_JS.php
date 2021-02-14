@@ -14,7 +14,7 @@ class Load_JS {
 
 	public function load_js() {
 		wp_enqueue_script( 'kntnt-parallax-images.js', Plugin::plugin_url( 'js/kntnt-parallax-images.js' ), [ 'jquery' ], Plugin::version(), true );
-		wp_localize_script( 'kntnt-parallax-images.js', 'kntnt_parallax_images', [ 'selector' => Plugin::option( 'selector' ) ] );
+		wp_localize_script( 'kntnt-parallax-images.js', 'kntnt_parallax_images', Plugin::option() );
 	}
 
 }
